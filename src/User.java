@@ -1,8 +1,11 @@
 package src;
 
+import java.util.HashMap;
+
 public class User {
     private String username;
     private String password;
+    private HashMap<String, Post> posts = new HashMap<>();
 
     public User (String username, String password){
         this.username = username;
@@ -15,5 +18,13 @@ public class User {
 
     public String getPassword(){
         return password;
+    }
+
+    public void addPost(String name, Post post){
+        posts.put(name, post);
+    }
+
+    public Post getPost(String name){
+        return posts.get(name);
     }
 }
