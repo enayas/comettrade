@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.util.String;
 
 public class Post
 {
@@ -11,16 +12,16 @@ public class Post
         
     }
     
-    public String createPost(double price, String title, String description)
+    public boolean createPost(String title, double price, String description)
     {
         if((price<1&&price>10000)||(fmod(price, 0.01))!=0||(title.length()>40&&title.length<1)||description.length()>300)
         {
-            return "A field has an incorrect input, please try again.\n";
+            return false;
         }
         this.price = price;
         this.title = title;
         this.description = description;
-        return "A new post has been created.\n";
+        return true;
     }
 
     public String getName()
@@ -35,7 +36,7 @@ public class Post
 
     public String getDescription()
     {
-        return description
+        return description;
     }
 
     @Override

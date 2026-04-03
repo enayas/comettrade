@@ -1,6 +1,7 @@
-pubilc class PostGUI()
+pubilc class PostGUI
 {
-    private PostController controller = new PostController();
-
-    
+    public class newPostStart(String title, double price, String description)
+    {
+        System.out.println(PostController.newPost(String title, double price, String description));
+    }
 }

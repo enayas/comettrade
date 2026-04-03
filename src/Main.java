@@ -1,6 +1,9 @@
 package src;
 
 public class Main {
+    
+    public String currUser;
+    
     public static void main(String[] args) {
         LogoutGUI logoutGUI = new LogoutGUI();
 

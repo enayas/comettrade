@@ -20,11 +20,15 @@ public class User {
         return password;
     }
 
-    public void addPost(String name, Post post){
+    public void addPost(String title, Post post){
         posts.put(name, post);
     }
 
     public Post getPost(String name){
         return posts.get(name);
+    }
+
+    public boolean hasPost(String title){
+        posts.containsKey(title);
     }
 }

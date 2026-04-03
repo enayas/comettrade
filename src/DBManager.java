@@ -8,6 +8,11 @@ public class DBManager
         users.put(user.getUsername(), user);
     }
 
+    public void storePost(String name, Post post)
+    {
+        users.get(name).addPost(post);
+    }
+
     public User getUser(String name)
     {
         return users.get(name);
